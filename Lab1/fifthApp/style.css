@@ -1,0 +1,103 @@
+body {
+	padding: 20px;
+	text-align: center ;
+	background-color:#f2bb4c ;
+}
+
+#widget {
+	width: 100 px;
+	background-color: #555;
+	margin: 0 auto ;
+	padding: 10 px;
+}
+
+#nr1 {
+	/*margin-top: 10px;*/
+	height: 30px;
+	width: 50px;
+	margin: 30px auto ;
+	background-color: #f5d9f7;
+	color: #555;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+}
+
+#nr2 {
+	margin-top: 10px;
+	height: 30px;
+	width: 50px;
+	margin: 0 auto ;
+	background-color: #f5d9f7;
+	color: #555;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+	border: 10px;
+}
+
+#sum {
+	margin-top: 10px;
+	height: 50px;
+	width: 50px;
+	background-color: #c38500;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20 px;
+	border: 0px;
+}
+
+#sub {
+	margin-top: 10px;
+	height: 50px;
+	width: 50px;
+	background-color: #c38500;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20 px;
+	border: 0px;
+}
+
+#mult {
+	margin-top: 10px;
+	height: 50px;
+	width: 50px;
+	background-color: #c38500;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20 px;
+	border: 0px;
+}
+
+#div {
+	margin-top: 10px;
+	height: 50px;
+	width: 50px;
+	background-color: #c38500;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20 px;
+	border: 0px;
+}
+
+#result {
+	margin-top: 20px;
+	height: 30px;
+	width: 50px;
+	margin: 20px auto ;
+	background-color: #f5d9f7;
+	color: #555;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+}
+
+#add:hover {
+cursor:pointer;
+background-color:#8cb8ff;
+color:#fff;
+}
