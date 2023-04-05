@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat App</title>
+    <style>
+      #messages {
+        height: 300px;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chat App</h1>
+    <div id="messages"></div>
+    <input type="text" id="message1" placeholder="Enter message for user1...">
+    <button id="send1">Send</button>
+    <br>
+    <input type="text" id="message2" placeholder="Enter message for user2...">
+    <button id="send2">Send</button>
+    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="client.js"></script>
+    <script>
+      const socket = io();
+
+      socket.on('message-from-server', function (payload) {
+        
+        const messages = document.getElementById("messages");
+        const p = document.createElement("p");
+        const sender = payload.sender;
+        const message = payload.message;
+        console.log("Received message from server:", message);
+        p.textContent = sender + ": " + message;
+        messages.appendChild(p);
+      });
+
+      document.getElementById("send1").addEventListener("click", function() {
+        sendMessage("user1");
+      });
+
+      document.getElementById("send2").addEventListener("click", function() {
+        sendMessage("user2");
+      });
+
+      function sendMessage(user) {
+        let message;
+        if (user === "user1") {
+          message = document.getElementById("message1").value;
+        } else if (user === "user2") {
+          message = document.getElementById("message2").value;
+        }
+        socket.emit("message-from-client", {user: user, message: message});
+        console.log("sent message: "+message);
+        document.getElementById("message1").value = "";
+        document.getElementById("message2").value = "";
+      }
+    </script>
+  </body>
+</html>
